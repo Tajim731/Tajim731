@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>TAJIM MRIDHA||زبير احمد</title>
+<link rel="shortcut icon" type="image/jpg" href="https://ibb.co/nnj7ntj">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+    window.onload = function() {
+        setTimeout(stopPreLoader,700);
+    };
+	
+	function stopPreLoader(){
+		document.getElementById("preLoader").classList.add("none");
+		document.getElementById("main").classList.remove("none");
+	}
+</script>
+	
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+      }
+      @media screen and (min-width: 600px) {
+        .column {
+          width: 50%;
+        }
+      }
+    </style>
+    <style>
+		body {
+			background-color: black;
+			height: 100vh;
+		}
+
+		.star {
+			position: absolute;
+			top: 0;
+			width: 2px;
+			height: 2px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			opacity: 0;
+			animation: star 0.5s linear infinite;
+		}
+
+		@keyframes star {
+			from {
+				transform: translate(0, -50px);
+				opacity: 1;
+			}
+			to {
+				transform: translate(0, calc(100vh + 50px));
+				opacity: 0;
+			}
+		}
+		
+    #profile {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 50px;
+      }
+      
+      h1 {
+        font-size: 33px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #FF10F0;
+      }
+      
+      p {
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      
+      #typing {
+        display: inline-block;
+        color: #FFFFFF;
+      }
+      
+      #cursor {
+        display: inline-block;
+        margin-left: 5px;
+        animation: blink .7s infinite;
+      }
+      
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      .profile-pic {
+        border-radius: 50%;
+        width: 175px;
+        height: 175px;
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+	  .none{
+		display: none;
+	  }
+	 .preloader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+
+      .preloader img {
+        width: 400px;
+        height: 80px;
+      }
+  </style>
+</head>
+<body>
+<div id="preLoader" class="">
+    <div class="preloader">
+      <img src="https://gifyu.com/image/SgN6J" alt="Loading...">
+    </div>
+</div>
+<div id="main" class="none">
+	<div class="stars-container">
+	    <!-- Create 1000 stars using JavaScript -->
+	</div>
+		<script>
+		// Create 1000 stars and append them to the stars-container div
+		const starsContainer = document.querySelector('.stars-container');
+		for (let i = 0; i < 1000; i++) {
+			const star = document.createElement('div');
+			star.classList.add('star');
+			star.style.left = `${Math.random() * 100}%`;
+			star.style.animationDelay = `${Math.random()}s`;
+			starsContainer.appendChild(star);
+		}
+	</script>
+  <div style="text-align:center;"><img src="https://gifyu.com/image/SgN6J" alt="Head profile picture" width="250" height="250"></div>
+  <div id="profile">
+          <h1 style="font-family: 'Bebas Neue', cursive;">Hi! I'm TAJIM MRIDHA<br>
+<span id="typing"></span><span>_</span></h1>
+        </div>
+  <script defer>
+    const words = ["|Student", "|Developer", "|Designer"];
+    const typing = document.getElementById("typing");
+    let currentWordIndex = 0;
+    let currentLetterIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentWord = words[currentWordIndex];
+
+        if (!isDeleting) {
+            typing.innerHTML = currentWord.substring(0, currentLetterIndex + 1);
+            currentLetterIndex++;
+
+            if (currentLetterIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 550);
+            } else {
+                setTimeout(type, 30);
+            }
+        } else {
+            typing.innerHTML = currentWord.substring(0, currentLetterIndex - 1);
+            currentLetterIndex--;
+
+            if (currentLetterIndex === 0) {
+                isDeleting = false;
+                currentWordIndex++;
+                if (currentWordIndex === words.length) {
+                    currentWordIndex = 0;
+                }
+            }
+
+            setTimeout(type, 100);
+        }
+    }
+
+    type();
+  </script>
+  <style>
+          .button-container {
+                  text-align: center;
+          }
+  
+          .facebook-button {
+                  display: inline-block;
+                  padding: 11px 35px;
+                  background-color: #0096FF;
+                  border-radius: 25px;
+                  color: #fff;
+                  font-weight: bold;
+                  text-decoration: none;
+                  box-shadow: 0px 0px 15px #0096FF;
+                  transition: box-shadow 0.3s ease-in-out;
+          }
+  
+          .facebook-button:hover {
+                  box-shadow: 0px 0px 25px #0096FF;
+          }
+  </style>
+  <div class="button-container">
+          <a href="https://www.facebook.com/tajim.mridha.5" target="_blank" class="facebook-button">Facebook</a>
+  </div><br>
+  <style>
+    .button-container {
+        text-align: center;
+    }
+
+    .instagram-button {
+        display: inline-block;
+        padding: 11px 35px;
+        background: linear-gradient(45deg, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #405DE6;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .instagram-button:hover {
+        box-shadow: 0px 0px 25px #405DE6;
+    }
+  </style>
+  <div class="button-container">
+    <a href="https://instagram.com/mridhatajim?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank" class="instagram-button">Instagram</a>
+  </div><br>
+  <style>
+    .button-container {
+        text-align: center;
+    }
+
+    .telegram-button {
+        display: inline-block;
+        padding: 11px 36px;
+        background-color: #0088cc;
+        border-radius: 35px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #0088cc;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .telegram-button:hover {
+        box-shadow: 0px 0px 25px #0088cc;
+    }
+  </style>
+  <div class="button-container">
+    <a href="https://t.me/Tajim7377" target="_blank" class="telegram-button">Telegram</a>
+  </div><br>
+  <style>
+    .button-container {
+        text-align: center;
+    }
+
+    .github-button {
+        display: inline-block;
+        padding: 11px 50px;
+        background-color: #171515;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #171515;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .github-button:hover {
+        box-shadow: 0px 0px 25px #171515;
+    }
+  </style>
+  <div class="button-container">
+    <a href="https://github.com/Tajim731" target="_blank" class="github-button">GitHub</a>
+  </div><br>
+  <style>
+    .button-container {
+        text-align: center;
+    }
+
+    .twitter-button {
+        display: inline-block;
+        padding: 11px 45px;
+        background-color: #00acee;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #00acee;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .twitter-button:hover {
+        box-shadow: 0px 0px 25px #00acee;
+    }
+  </style>
+  <div class="button-container">
+    <a href="https://twitter.com/MDTAJIM60784542?t=kM6NQhDFDicPB5DDQvAMfA&s=09" target="_blank" class="twitter-button">Twitter</a>
+  </div><br>
+  <style>
+    .button-container {
+        text-align: center;
+    }
+    .email-button {
+        display: inline-block;
+        padding: 11px 50px;
+        background-color: #FF10F0;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #FF10F0;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .email-button:hover {
+        box-shadow: 0px 0px 25px #FF10F0;
+    }
+</style>
+
+<div class="button-container">
+    <a href="mailto:tajim7377@gmail.com" class="email-button">Email</a>
+</div><br>
+  <style>
+		footer {
+			color: #FFFFFF; /* Set the text color to white */
+		}
+	</style>
+	<footer>
+		<center>
+			<h3 style="font-family: Wosald;"><b>TAJIM MRIDHA © 2023</b></h3>
+		</center>
+	</footer>
+</div>	
+</body>
+</html>
